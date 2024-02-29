@@ -11,12 +11,46 @@
 </head>
 <body>
     <header>
-
+        <img src="imagenes/logo_alura.png" alt="logo de alura" class="logo">
     </header>
     <main>
-        <section></section>
-        <section></section>
+        <!-- div para ventana modal de mensaje error-->
+        <div class="modal" id="modal">
+            <img src="imagenes/simbolo.png" alt="simbolomodal">
+            <h2>Lo Siento!!!</h2>
+            <p id="mensajeX">El detalle del mensaje va aqui escrito</p>
+            <button type="button" id="cerrar-btn" onclick="cerrarModal()">Cerrar</button>
+        </div>
+        <!-- Seccion de consulta (textarea, mensaje de validacion y botones) -->
+        <section class="consulta">
+            <textarea class="area-consulta" placeholder=">> Ingrese el texto aqui" id="areaConsulta"></textarea>
+            <div class="validacion">
+                <p class="mensaje-x">Solo letras minusculas y sin acentos</p> 
+            </div>
+            <div class="container-btn">
+                <button type="submit" onclick="encriptar()" class="encriptar-btn"><img src="imagenes/encriptar.png" alt="copiar">Encriptar</button>                
+                <button type="submit" onclick="desencriptar()" class="desencriptar-btn"><img src="imagenes/desencriptar.png" alt="copiar">Desencriptar</button>   
+            </div>
+        </section>
+        <!-- Seccion de respuesta (imagen, titulo, parrafo, textarea y boton copiar) -->
+        <section class="respuesta">
+            <div class="img-encriptador">
+                <img src="imagenes/criptoBanner.jpg" alt="imagen de figura" class="imagen-banner">
+            </div>
+
+            <div class="cajatitulo-respuesta"><h3 class="titulo-respuesta">Ningun mensaje fue encontrado</h3></div>
+
+            <div class="cajaparrafo-respuesta"><p class="parrafo-respuesta">Ingrese el texto que desea encriptar y desencriptar </p></div>
+
+            <textarea class="area-respuesta" ></textarea>
+
+            <button type="submit" onclick="copiarTexto()" class="copiar-btn" id="copiar-btn" >
+                <img src="imagenes/copiar.png" alt="copiar">Copiar</button>    
+        </section>
     </main>
-    <footer></footer>
+    <footer>
+        <p class="copyright">&copy; Copyright Willmer Molina (Alura-Oracle) V2 - 2024</p>
+    </footer>
+    <script src="js/app.js"></script>
 </body>
 </html>
