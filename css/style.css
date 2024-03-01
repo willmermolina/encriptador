@@ -9,7 +9,7 @@
     font-family: 'Inter', sans-serif; 
     
 }
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 934px){
     body{
         position: relative;
         width: 100vw;
@@ -285,7 +285,7 @@
 /****************************************************************/
 /*       Diseño css para pantallas tablet desde 768px * 1174px  */
 /****************************************************************/
-@media screen and (min-width: 768px) and (max-width:1023px){
+@media screen and (min-width: 768px) and (max-width:1023px) and ( orientation: portrait ){
     
 
     body {
@@ -532,9 +532,9 @@
 }
 
 /****************************************************************/
-/*       Diseño css para pantallas movil desde 360px * 933px    */
+/* Diseño css para pantallas movil desde 360px * 933px vertical */
 /****************************************************************/
-@media screen and (min-width: 360px) and (max-width:767px){
+@media screen and (min-width: 360px) and (max-width:767px) and ( orientation: portrait ){
     
 
     body {
@@ -615,7 +615,7 @@
         left: 10%;
         padding: 20px;
         font-family: 'Inter', sans-serif;
-        font-size: 1.5em;
+        font-size: 1.3em;
         line-height: 150%;
         font-weight: 400;
         background: #f3f5fc1b;    
@@ -640,6 +640,9 @@
         top: 62%;  
         left: 10%;  
         width: 80%; 
+    }
+    .validacion p{
+        font-size: 14px;
     }
     .validacion p::before{
         content: "ⓘ ";
@@ -712,6 +715,252 @@
         gap: 1%;
         background: #f3f5fc1b;    
         border-radius: 32px;
+        overflow: hidden;        
+    }
+    .img-encriptador{          
+        display: none;   
+    }
+    .cajatitulo-respuesta{    
+        width: 90%; 
+        padding-top: 5px;    
+        text-align: center;    
+        display: flex;
+        flex-direction: column;
+        justify-content: end;         
+    } 
+    .cajaparrafo-respuesta{
+        width: 80%;
+        margin: 0.5em auto;
+        text-align: center; 
+    }
+    h3, p{
+        font-family: 'Inter', sans-serif;
+        color: #1bafef;
+    }      
+    .area-respuesta{
+        display: none;
+        width: 90%;    
+        height: 40%;
+        text-align: center;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.5em;
+        line-height: 100%;
+        font-weight: 400;
+        color: #1bafef;
+        background:none;
+        border: none;
+        resize: none;
+    }
+    .copiar-btn{
+        position: absolute;
+        display: none;
+        bottom: 5%;
+        width: 90%;
+        height: 3em;
+        padding: 1%;
+        gap: 5px;
+        font-size: 14px;
+        font-family: 'Inter', sans-serif;
+        text-align: center;
+        align-content: center;
+        border: 2px solid #1bafef;
+        color: #1bafef;
+        background: #f3f5fc1b;
+        border-radius: 16px;
+    }
+    .copiar-btn img{
+        width: 1em;
+        margin: 0 2%;
+    }
+    footer{
+        width: 100%;
+        position: absolute;
+        bottom: 5%;
+        text-align: center; 
+        font-size: 14px;     
+    }
+}
+
+/******************************************************************/
+/* Diseño css para pantallas movil desde 360px * 933px horizontal */
+/******************************************************************/
+@media screen and (min-width: 360px) and (max-width:933px) and ( orientation: landscape ){
+    
+
+    body {
+        display: block;          
+        background-color: #0E191F;
+    }
+    header{
+        width: 100%;
+        height: 70px;    
+    }
+    .logo{
+        width: auto;
+        height: 100%;   
+    }
+    main{
+        display: block;
+        width: 100vw;
+        height: 85%;   
+    }
+    .modal{
+        width: 50%;
+        background: #FFFFFF;
+        border-radius: 6px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        z-index: 100;
+        transform: translate(-50%, -50%) scale(0.1);
+        text-align: center;
+        padding: 0 30px 30px;
+        visibility: hidden;
+        transition: transform 0.5s, top 0.5s;
+    }
+    .modal-abrir{
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    .modal img{
+        width: 80px;
+        margin-top: -40px;
+        border-radius: 50%;
+        box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+    }
+    .modal h2{
+        font-size: 36px;
+        font-weight: 400;
+        margin: 30px 0 10px;
+        font-family: 'Inter', sans-serif;
+        color: darkblue;
+    }
+    .modal button{
+        width: 100%;
+        margin-top: 50px;
+        padding: 10px 0;
+        background-color: royalblue ;
+        color: #FFFFFF;
+        border: 0;
+        outline: none;
+        font-size: 18px;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+    }
+    .modal button:hover{
+        background-color: darkslateblue;
+    }
+    .consulta{
+        width: 60%;
+        height: 60%;
+        position: absolute;        
+    }
+    .area-consulta{
+        position: absolute;
+        width: 80%;
+        height: 40%;
+        top: 5%;
+        left: 10%;
+        padding: 20px;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.3em;
+        line-height: 150%;
+        font-weight: 400;
+        background: #f3f5fc1b;    
+        color: #1bafef;
+        border: none;
+        border-radius: 24px;
+        resize: none;
+    }
+    .area-consulta:focus{
+        border: none;
+        outline: none;
+        height: 50%;
+        color: aqua;
+        font-weight: bold;
+    }
+    .area-consulta:active{
+        border: none;
+        outline: none;
+    } 
+    .validacion{
+        position: absolute; 
+        top: 62%;  
+        left: 10%;  
+        width: 80%; 
+    }
+    .validacion p::before{
+        content: "ⓘ ";
+    }
+    .container-btn{
+        position: absolute;
+        display: flex;
+        flex-direction: row;    
+        align-items: center;
+        padding: 0 5%;        
+        top: 70%;
+        left: 10%;
+        width: 80%;
+        height: 7em;
+        gap: 15%;
+    }
+    .encriptar-btn{    
+        width: 100%;
+        height: 3em; 
+         
+        font-size: 16px;
+        font-family: 'Inter', sans-serif;
+        text-align: center;
+        align-items: center;
+        border: 2px solid #1bafef;
+        color: #1bafef;
+        background: #f3f5fc1b;
+        border-radius: 16px;
+    }
+    .encriptar-btn img{
+        width: 0.8em;
+        margin: 0 2%;
+    }
+    .desencriptar-btn{
+        width: 100%;
+        height: 3em;      
+        gap: 8px;
+        font-size: 16px;
+        font-family: 'Inter', sans-serif;
+        text-align: center;
+        align-items: center;
+        border: 2px solid #1bafef;
+        color: #1bafef;
+        background: #f3f5fc1b;
+        border-radius: 16px;
+    }
+    .desencriptar-btn img{
+        width: 1em;
+        margin: 0 2%;
+    }
+    .encriptar-btn:hover,
+    .desencriptar-btn:hover{
+        margin: 0.3%;
+        width: 99.5%;
+        
+        border: 3px solid #00FFFF;
+        color:#00FFFF;
+    }
+    .respuesta{
+        position: absolute;
+        width: 40%;
+        height: 65%;
+        top: 20%;
+        right: 5%;    
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 1%;
+        background: #f3f5fc1b;    
+        border-radius: 18px;
         overflow: hidden;        
     }
     .img-encriptador{          
